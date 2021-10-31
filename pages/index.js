@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { DatabaseService } from '../services/database'
 import { CardTodo, FormTodo } from '../components'
 import { Grid } from '@mui/material'
-import VercelImg from '../public/vercel.svg'
 
 export default function Home() {
   const [todos, setTodos] = useState([])
@@ -95,8 +93,8 @@ export default function Home() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image
-              src={VercelImg}
+            <img
+              src='/vercel.svg'
               alt='Vercel Logo'
               width={72}
               height={16} />
