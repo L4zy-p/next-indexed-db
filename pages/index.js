@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import { DatabaseService } from '../services/database'
 import { CardTodo, FormTodo } from '../components'
 import { Grid } from '@mui/material'
+import VercelImg from './vercel.svg'
 
 export default function Home() {
   const [todos, setTodos] = useState([])
@@ -95,7 +96,7 @@ export default function Home() {
           Powered by{' '}
           <span className={styles.logo}>
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/vercel.svg`}
+              src={VercelImg}
               alt='Vercel Logo'
               width={72}
               height={16} />
