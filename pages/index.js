@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import { DatabaseService } from '../services/database'
 import { CardTodo, FormTodo } from '../components'
 import { Grid } from '@mui/material'
-import VercelImg from './vercel.svg'
+import VercelImg from '../public/vercel.svg'
 
 export default function Home() {
   const [todos, setTodos] = useState([])
