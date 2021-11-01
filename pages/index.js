@@ -53,54 +53,44 @@ export default function Home() {
           Welcome to <a href='https://nextjs.org'>Next.js & IndexedDB!</a>
         </h1>
         <br />
+        <br />
 
-        <div className={styles.grid}>
-          <Grid container justifyContent='center'>
-            <Grid item>
-              <FormTodo submit={addTodo} />
-            </Grid>
-          </Grid>
 
+        <Grid
+          container
+          justifyContent='flex-start'
+          spacing={{ xs: 2, md: 3 }}>
           <Grid
-            container
-            spacing={{ xs: 2, md: 3 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}>
-            {
-              todos?.map((todo, index) =>
-                <Grid
-                  item
-                  xs={2}
-                  sm={4}
-                  md={6}
-                  key={index}>
-                  <CardTodo
-                    item={todo}
-                    editTodo={editTodo}
-                    deleteTodo={deleteTodo}
-                    toggleTodo={toggleTodo} />
-                </Grid>)
-            }
+            item
+            xs={12}
+            sm={12}
+            md={12}>
+            <FormTodo submit={addTodo} />
           </Grid>
-        </div>
+        </Grid>
+
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 12, sm: 12, md: 12 }}>
+          {
+            todos?.map((todo, index) =>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={12}
+                key={index}>
+                <CardTodo
+                  item={todo}
+                  editTodo={editTodo}
+                  deleteTodo={deleteTodo}
+                  toggleTodo={toggleTodo} />
+              </Grid>)
+          }
+        </Grid>
 
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <img
-              src='/vercel.svg'
-              alt='Vercel Logo'
-              width={72}
-              height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

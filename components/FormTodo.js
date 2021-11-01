@@ -31,8 +31,9 @@ export const FormTodo = ({ submit, initialValues }) => {
     onSubmit={handleSubmit(onSubmit)}
   >
     <Grid container alignItems='center' spacing={2}>
-      <Grid item>
+      <Grid flex='auto' item>
         <TextField
+          style={{ width: '100%' }}
           size='small'
           required
           id='name'

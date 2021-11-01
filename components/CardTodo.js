@@ -46,7 +46,7 @@ export const CardTodo = ({
   }
 
   return <Card
-    sx={{ width: '100%', maxWidth: '350px' }}>
+    sx={{ width: '100%' }}>
     <CardContent>
       <Grid
         container
